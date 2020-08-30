@@ -1,0 +1,24 @@
+// storing a list of strings in 2d char array
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char[100][1000];
+    
+    //read a list of strings
+    int n;
+    cin>>n;
+    cin.get();
+    for (int i=0;i<n;i++){
+        cin.getline(a[i][1000]);
+    }
+    
+    //print out all the strings
+    for (int i =0;i<n;i++){
+        cout<<a[i]<<endl;
+    }
+}

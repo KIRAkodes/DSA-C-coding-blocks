@@ -1,0 +1,69 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+void
+Magical_park (char a[][1000], int m, int n, int k, int s)
+{
+
+//suceess = TRUE means piyush canget out pf the park
+  bool success = true;
+  for (int i = 0; i < m; i++)
+    {
+      for (int j = 0; j, n; j++)
+	{
+	  char ch = a[i][j];
+	  //checking 
+	  if (s < k)
+	    {
+	      success = false;
+	      break;
+	    }
+
+	  else if (ch == '*')
+	    {
+	      s += 5;
+	    }
+	  else if (ch == '.')
+	    {
+	      s -= 2;
+	    }
+	  else
+	    {
+	      break;
+	    }
+	  //we also loose a point when we move right execept for the last collumn
+	  if (j != n - 1)
+	    {
+	      s--;
+	    }
+	}
+}
+  if (success)
+    {
+      cout << "yes" << endl;
+      cout << s << endl;
+    }
+    else {
+        cout<<"no"<<endl;
+    }
+    }
+    
+  int main ()
+  {
+    int m, n, k, s;
+    cin >> m >> n >> k >> s;
+    char park[1000][1000];
+
+    //take input 
+    for (int i = 0; i < n; i++)
+      {
+	for (int j = 0; j < n; j++)
+	  {
+	    cin >> park[i][j];
+
+	  }
+      }
+    Magical_park (park, m, n, k, s);
+    return 0;
+
+  }
